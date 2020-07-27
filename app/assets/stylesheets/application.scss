@@ -1,2 +1,14 @@
 @import "reset";
-/*@import "modules/messages";*/
+@import "modules/show";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/Header";
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+}
