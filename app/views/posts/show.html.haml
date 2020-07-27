@@ -3,19 +3,19 @@
 .Crumbs
   .Crumbs__lists
     .Crumbs__lists__categoryName
-      %a{href: "#",class:"categoryName__url"} カテゴリー１
+      %p= link_to 'カテゴリー１', "#", class: "categoryName__url" 
     .Crumbs__lists__img
       =icon('fas','angle-right')
     .Crumbs__lists__categoryName
-      %a{href: "#",class:"categoryName__url"} カテゴリー2
+      %p= link_to 'カテゴリー２', "#", class: "categoryName__url" 
     .Crumbs__lists__img
       =icon('fas','angle-right')
     .Crumbs__lists__categoryName
-      %a{href: "#",class:"categoryName__url"} カテゴリー3
+      %p= link_to 'カテゴリー３', "#", class: "categoryName__url" 
     .Crumbs__lists__img
       =icon('fas','angle-right')
     .Crumbs__lists__categoryName
-      %a{href: "#",class:"categoryName__url"} カテゴリー4
+      %p= link_to 'カテゴリー４', "#", class: "categoryName__url" 
     .Crumbs__lists__img
       =icon('fas','angle-right')
     .Crumbs__lists__categoryName
@@ -100,13 +100,13 @@
 
 
       %ul.Show-Main__box__right__links
-        %a{href:"#" ,class:"Link__url"}
+        =link_to "#",class:"Link__url" do
           %li.Show-Main__box__right__links__beforeLink
             .Show-Main__box__right__links__beforeLink__img
               =icon('fas','angle-left')
             .Show-Main__box__right__links__beforeLink__text
               %p 前の商品
-        %a{href:"#" ,class:"Link__url"}
+        =link_to "#",class:"Link__url" do
           %li.Show-Main__box__right__links__afterLink
             .Show-Main__box__right__links__afterLink__img
               =icon('fas','angle-right')
@@ -114,10 +114,10 @@
               %p 後ろの商品
       .Show-Main__box__right__relatedItems
         .Show-Main__box__right__relatedItems__text
-          %a{href: "#",class:"RelatedItems__text__url"} ベビー・キッズをもっと見る
+          %p= link_to 'ベビー・キッズをもっと見る', "#", class: "RelatedItems__text__url" 
         .Show-Main__box__right__relatedItems__productLists
           .Show-Main__box__right__relatedItems__productLists__productList
-            %a{href: "#",class:"ProductList__url"} 
+            =link_to "#",class:"ProductList__url" do
               .Show-Main__box__right__relatedItems__productLists__productList__img
                 = image_tag("01.gif", class:"ProductList_img")
               .Show-Main__box__right__relatedItems__productLists__productList__body
