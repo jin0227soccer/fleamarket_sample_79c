@@ -1,27 +1,5 @@
-.Header
-  .Header__box
-    .Header__box__top
-      .Header__box__top__icon
-        = link_to image_tag("logo.png", class:"Header_img"), "/"
-      .Header__box__top__search
-        .Header__box__top__search__input
-          %input.SearchInput{name: "key", placeholder: "キーワードから探す"}/
-          .Header__box__top__search__input__icon
-            %button{type: "submit"}
-              .searchBox__icon
-                = link_to image_tag("icon-search 1.png", class:"Search_img"), "/"
-                %input{name: "authenticity_token",type:  "hidden"}
-    .Header__box__bottom
-      .Header__box__bottom__listLeft
-        .Header__box__bottom__listLeft__category
-          カテゴリー
-        .Header__box__bottom__listLeft__brand
-          ブランド
-      .Header__box__bottom__listRight
-        .Header__box__bottom__listRight__login
-          ログイン
-        .Header__box__bottom__listRight__new
-          新規会員登録
+= render 'Header'
+
 .Crumbs
   .Crumbs__lists
     .Crumbs__lists__categoryName
@@ -42,75 +20,75 @@
       =icon('fas','angle-right')
     .Crumbs__lists__categoryName
       %p 商品名
-.Main 
-  .Main__box
-    .Main__box__left
-    .Main__box__right
-      .Main__box__right__content
-        .Main__box__right__content__itemBox
-          .Main__box__right__content__itemBox__name
+.Show-Main 
+  .Show-Main__box
+    .Show-Main__box__left
+    .Show-Main__box__right
+      .Show-Main__box__right__content
+        .Show-Main__box__right__content__itemBox
+          .Show-Main__box__right__content__itemBox__name
             %P product3
-          .Main__box__right__content__itemBox__body
-            %ul.Main__box__right__content__itemBox__body__lists
-              %li.Main__box__right__content__itemBox__body__lists__image
+          .Show-Main__box__right__content__itemBox__body
+            %ul.Show-Main__box__right__content__itemBox__body__lists
+              %li.Show-Main__box__right__content__itemBox__body__lists__image
                 = image_tag("01.gif", class:"Main_img")
-                %ul.Main__box__right__content__itemBox__body__lists__list
-                  %li.Main__box__right__content__itemBox__body__lists__list__img
+                %ul.Show-Main__box__right__content__itemBox__body__lists__list
+                  %li.Show-Main__box__right__content__itemBox__body__lists__list__img
                     = image_tag("01.gif", class:"Sub_img")
-                  %li.Main__box__right__content__itemBox__body__lists__list__img
+                  %li.Show-Main__box__right__content__itemBox__body__lists__list__img
                     = image_tag("01.gif", class:"Sub_img")
-                  %li.Main__box__right__content__itemBox__body__lists__list__img
+                  %li.Show-Main__box__right__content__itemBox__body__lists__list__img
                     = image_tag("01.gif", class:"Sub_img")
-          .Main__box__right__content__itemBox__price
-            .Main__box__right__content__itemBox__price__name
+          .Show-Main__box__right__content__itemBox__price
+            .Show-Main__box__right__content__itemBox__price__name
               %p 30000円
-            .Main__box__right__content__itemBox__price__detail
-              .Main__box__right__content__itemBox__price__detail__name
+            .Show-Main__box__right__content__itemBox__price__detail
+              .Show-Main__box__right__content__itemBox__price__detail__name
                 %p (税込)
-              .Main__box__right__content__itemBox__price__detail__name
+              .Show-Main__box__right__content__itemBox__price__detail__name
                 %p 送料込み
-          .Main__box__right__content__itemBox__detail
+          .Show-Main__box__right__content__itemBox__detail
             %p 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰
 
 
-          .Main__box__right__content__itemBox__tableBox
+          .Show-Main__box__right__content__itemBox__tableBox
 
             %table{border: 1, width: "100%",class:"table"} 
-              .Main__box__right__content__itemBox__tableBox__tbody
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__name
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__name__th 出品者
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__name__td hoge
+              .Show-Main__box__right__content__itemBox__tableBox__tbody
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__name
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__name__th 出品者
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__name__td hoge
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__category
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__category__th カテゴリー
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__category__td 
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__category
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__category__th カテゴリー
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__category__td 
                     %p= link_to 'ベビーキッズ', "#", class: "Link__url" 
                     %p= link_to 'ベビー服(男女兼用)~95cm', "#", class: "Link__url" 
                     %p= link_to 'アウター', "#", class: "Link__url" 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__brand
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__brand__th ブランド
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__brand__td hoge
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__brand
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__brand__th ブランド
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__brand__td hoge
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__size
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__size__th 商品のサイズ
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__size__td hoge
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__size
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__size__th 商品のサイズ
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__size__td hoge
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__condition
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__condition__th 商品の状態
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__condition__td hoge
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__condition
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__condition__th 商品の状態
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__condition__td hoge
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__burden
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__burden__th 配送料の負担
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__burden__td hoge
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__burden
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__burden__th 配送料の負担
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__burden__td hoge
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__area
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__area__th 発送元の地域
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__area__td 
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__area
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__area__th 発送元の地域
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__area__td 
                     %p= link_to '岩手県', "#", class: "Link__url" 
 
-                %tr.Main__box__right__content__itemBox__tableBox__tbody__day
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__day__th 発送日の目安
-                  %th.Main__box__right__content__itemBox__tableBox__tbody__day__td hoge
+                %tr.Show-Main__box__right__content__itemBox__tableBox__tbody__day
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__day__th 発送日の目安
+                  %th.Show-Main__box__right__content__itemBox__tableBox__tbody__day__td hoge
 
 
 
@@ -121,34 +99,35 @@
 
 
 
-      %ul.Main__box__right__links
+      %ul.Show-Main__box__right__links
         %a{href:"#" ,class:"Link__url"}
-          %li.Main__box__right__links__beforeLink
-            .Main__box__right__links__beforeLink__img
+          %li.Show-Main__box__right__links__beforeLink
+            .Show-Main__box__right__links__beforeLink__img
               =icon('fas','angle-left')
-            .Main__box__right__links__beforeLink__text
+            .Show-Main__box__right__links__beforeLink__text
               %p 前の商品
         %a{href:"#" ,class:"Link__url"}
-          %li.Main__box__right__links__afterLink
-            .Main__box__right__links__afterLink__img
+          %li.Show-Main__box__right__links__afterLink
+            .Show-Main__box__right__links__afterLink__img
               =icon('fas','angle-right')
-            .Main__box__right__links__afterLink__text
+            .Show-Main__box__right__links__afterLink__text
               %p 後ろの商品
-      .Main__box__right__relatedItems
-        .Main__box__right__relatedItems__text
+      .Show-Main__box__right__relatedItems
+        .Show-Main__box__right__relatedItems__text
           %a{href: "#",class:"RelatedItems__text__url"} ベビー・キッズをもっと見る
-        .Main__box__right__relatedItems__productLists
-          .Main__box__right__relatedItems__productLists__productList
+        .Show-Main__box__right__relatedItems__productLists
+          .Show-Main__box__right__relatedItems__productLists__productList
             %a{href: "#",class:"ProductList__url"} 
-              .Main__box__right__relatedItems__productLists__productList__img
+              .Show-Main__box__right__relatedItems__productLists__productList__img
                 = image_tag("01.gif", class:"ProductList_img")
-              .Main__box__right__relatedItems__productLists__productList__body
-                .Main__box__right__relatedItems__productLists__productList__body__name
+              .Show-Main__box__right__relatedItems__productLists__productList__body
+                .Show-Main__box__right__relatedItems__productLists__productList__body__name
                   %p ee
-                .Main__box__right__relatedItems__productLists__productList__body__detail
-                  .Main__box__right__relatedItems__productLists__productList__body__detail__price
+                .Show-Main__box__right__relatedItems__productLists__productList__body__detail
+                  .Show-Main__box__right__relatedItems__productLists__productList__body__detail__price
                     %p 1000円
-                  .Main__box__right__relatedItems__productLists__productList__body__detail__text
+                  .Show-Main__box__right__relatedItems__productLists__productList__body__detail__text
                     %p (税込)
 
+= render 'Footer'
 
