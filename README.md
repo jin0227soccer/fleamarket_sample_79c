@@ -1,5 +1,5 @@
 # fleamarket_sample_79c DB設計
-## usersテーブル!
+## usersテーブル
 |Column|Type|Option|
 |------|----|------|
 |nickname|string|null: false|
