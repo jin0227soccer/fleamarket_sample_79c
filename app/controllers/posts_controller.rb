@@ -42,7 +42,9 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
     @category = @post.category
     @like = Like.new
-    @current_like = @post.likes.where(user_id: current_user.id).first
+    if user_singed_in?
+      @current_like = @post.likes.where(user_id: current_user.id).first
+    end
   end
 
 
